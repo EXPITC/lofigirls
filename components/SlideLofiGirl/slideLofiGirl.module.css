@@ -1,0 +1,9 @@
+.wrapper {
+    height:650px;
+    width:100%;
+    position: relative;
+}
+.cardImage {
+    height:577px;
+    overflow: hidden;
+}

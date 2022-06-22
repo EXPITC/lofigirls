@@ -1,0 +1,180 @@
+.backgroundImage {
+  height: 650px;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  top:0;
+  transition:all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  overflow: hidden;
+}
+.latestBox {
+  box-shadow: rgba(255, 255, 255, 0.557) 0px 1px 2px 0px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.latestBox h4 {
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  initial-letter: optimizeLegibility;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  padding-bottom: 25px;
+}
+.latestBox button {
+  transform: translateY(-20px);
+  border-radius: 25px;
+  width: 250px;
+  max-width: 100%;
+  height: 45px;
+  border: none;
+  text-align: center;
+  text-transform: capitalize;
+  background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.latestBox button:hover {
+  text-shadow: 0px 0px 8px rgba(128, 0, 255, 0.5);
+  background-image: none;
+  color: #5f72be;
+  border: 2px solid #5f72be;
+  background-color: transparent;
+}
+.card {
+  display: flex;
+  overflow-wrap: wrap;
+}
+.albumCard {
+  margin: 0px 15px 50px 15px;
+  position: relative;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
+.albumCard:hover {
+  z-index: 1;
+}
+.albumImage {
+  border-radius: 20px;
+  height: 196px;
+  width: 196px;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  cursor: pointer;
+}
+.albumImage:hover {
+  height: 250px;
+  width: 250px;
+  margin: 15px 15px 0px 15px;
+}
+.albumImageFrame {
+  border-radius: 20px;
+  height: 196px;
+  width: 196px;
+  position: absolute;
+  z-index: 9;
+  opacity:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  background-color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.albumImageFrame:hover {
+  opacity:0.4;
+  height: 250px;
+  width: 250px;
+}
+.playPause {
+  opacity:1 !important;
+  height: 50px;
+  width: 250px;
+  display: flex;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-top:0px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  overflow: hidden;
+}
+.playPauseActive{
+  border-top: 25px solid transparent;
+  border-left: 50px solid white;
+  border-bottom: 25px solid transparent;
+  height: 0px !important;
+  width: 0px !important;
+}
+.playPause span {
+  transform: translateX(-5px);
+  height: 45px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 200px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.albumImageFrame:hover .playPause span{
+  margin:5px !important;
+}
+.disc {
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 0.1px solid rgba(240, 255, 255, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  animation: play 24s linear infinite;
+  top: 35px;
+  left: 20px;
+  visibility: hidden;
+  transition: all 0.1s cubic-bezier(0.7, -0.01, 0.33, 0.96);
+}
+.discPlay {
+  transition: all 1.5s cubic-bezier(0.7, -0.01, 0.33, 0.96);
+  left: 180px;
+  visibility: visible;
+}
+.discPause {
+  animation-play-state: paused !important;
+}
+@keyframes play {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.signature {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}

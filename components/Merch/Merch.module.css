@@ -1,0 +1,84 @@
+.wrapper {
+  border: 1px solid black;
+  height: 600px;
+  text-align: center;
+}
+.wrapper > h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.cardBox {
+  height: 70%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 85%;
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid peru;
+  /* margin: 1rem; */
+  /* overflow: hidden; */
+  padding: 10px;
+}
+.cardHead {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display:flex;
+} 
+.cardImageBox {
+  border-radius: 20px;
+  height: 85%;
+  width: 100%;
+  margin: none !important;
+  padding: none !important;
+  /* border: 1px solid rgb(51, 0, 255); */
+  /* border: none; */
+  overflow: hidden;
+}
+.imageMove {
+  top:0px;
+  left:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.imageMove:hover {
+  transition: all 0.25s ease-out;
+}
+.smoothOut {
+  transition: all 0.1s ease-out;
+}
+.iconLeftRight {
+  position: relative;
+  display: block;
+  z-index: 1;
+  top: -20px;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.iconLeftRight:Hover{
+  transform:scale(1.1);
+  transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+/* .iconLeftRightHover {
+  
+  border:1px solid blue;
+  background-color: white;
+} */
+.cardWrapper {
+  height: 100%;
+  max-width: 335px;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  border:1px solid purple;
+}

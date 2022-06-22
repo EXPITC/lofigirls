@@ -1,0 +1,265 @@
+.wrapper {
+  height: 272px;
+  width: inherit;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding-top: 6%;
+  animation-delay: 0.25s;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panelComponent {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid black;
+  width: 277px;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.panelComponentTransition {
+  width: 476px;
+  transition-delay: 0.25s;
+}
+.greet {
+  position: relative;
+  bottom: -90px;
+  margin: 0;
+  letter-spacing: 0;
+  font-size: 23px;
+  line-height: normal;
+  opacity: 0;
+  margin-bottom: 35px;
+}
+.greetIn {
+  animation: greetingOpening 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.greetOut {
+  animation: greetClosing 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes greetingOpening {
+  to {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes greetClosing {
+  0% {
+    opacity: 1;
+    bottom: 0px;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    bottom: -90px;
+  }
+}
+.formSignUp {
+  position: relative;
+  border-top: 2px solid black;
+  margin: 0px;
+  margin-top: 60px;
+  height: auto;
+  animation-delay: 0.5s;
+  top: -295px;
+  display: flex;
+  justify-content: flex-end;
+}
+.formSignUpIn {
+  animation: fromSignUpOpening 0.25s cubic-bezier(0.54, -0.23, 0.02, 0.8)
+    forwards;
+}
+.formDelay {
+  animation-delay: 0.25s;
+}
+.formTo {
+  animation-delay: 0.15s;
+}
+.formSignUpOut {
+  animation: fromSignUpClosing 0.55s cubic-bezier(0.54, -0.23, 0.02, 0.8)
+    forwards;
+}
+@keyframes fromSignUpOpening {
+  to {
+    top: 0px;
+  }
+}
+@keyframes fromSignUpClosing {
+  0% {
+    top: 0px;
+  }
+  50%{
+    top:-300px;
+    opacity:1px;
+  }
+  100% {
+    opacity:0;
+  }
+}
+.formSignUp form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 30px;
+  animation: formShowUp 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+@keyframes formShowUp {
+  to {
+    width: 100%;
+  }
+}
+.formSignUp form input {
+  height: 42px;
+  margin-bottom: 10px;
+  padding: 0 18px;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 0%;
+  opacity: 0;
+  writing-mode: horizontal-tb !important;
+  font-style: italic;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.formInputIn input {
+  animation: inputOpening 0.6s cubic-bezier(0.72, -0.41, 0.52, 0.53) forwards;
+}
+.formInputOut input {
+  animation: inputClosing 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes inputOpening {
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes inputClosing {
+  from {
+    opacity: 1;
+  }
+  20%{
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0;
+    width: 0%;
+  }
+}
+.formSignUp input::placeholder {
+  font-style: italic;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  text-overflow: ellipsis;
+}
+.formSignUp input:focus {
+  outline: none !important;
+}
+.formSignUp button {
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+  height: 42px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  outline: none;
+  white-space: nowrap;
+  background-color: #306850;
+  border: 1px solid #306850;
+  color: white;
+  opacity: 0.5;
+  transition: 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: buttonOpening 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.formSignUp button:hover {
+  color: #306850;
+  background-color: transparent;
+}
+
+@keyframes buttonOpening {
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.textSection {
+  font-size: 14px;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  opacity:0;
+}
+.textIn{
+  animation: textOpening 4.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.4s;
+}
+.textOut {
+  animation: textClosing 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes textOpening {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textClosing {
+  from {
+    opacity: 1;
+  } to {
+    opacity:0;
+  }
+}
+.textSection span {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.passwordEye {
+  display: inline;
+  position: relative;
+  width: 20px;
+  height: 0;
+  left: 92%;
+  bottom: 32px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.85s cubic-bezier(0.47, 0.22, 0.14, 1);
+}
+.passwordEyeIn {
+  animation: eyeOpening 0.85s cubic-bezier(0.47, 0.22, 0.14, 1) forwards;
+  animation-delay: 0.5s;
+}
+.passwordEyeOut {
+  animation: eyeClosing 0.15s cubic-bezier(0.47, 0.22, 0.14, 1) forwards;
+}
+@keyframes eyeOpening {
+  to {
+    bottom: 40px;
+    opacity: 1;
+  }
+}
+@keyframes eyeClosing {
+  from {
+    bottom: 40px;
+    opacity: 1;
+  }
+  to {
+    left: 55%;
+    bottom: 32px;
+    opacity: 0;
+  }
+}

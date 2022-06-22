@@ -1,0 +1,28 @@
+.main{
+    width: 476px;
+    /* height:200px; */
+    border:2px solid black;
+}
+
+.in {
+    animation: in  1.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+@keyframes in {
+    from {
+        height:0;
+    }
+    to {
+        height: 200px;
+    }
+}
+.out {
+    animation: out 1.5s cubic-bezier(0.23, 1, 0.320, 1) forwards;
+}
+@keyframes out {
+    from {
+        height: 200px;
+    } to {
+        height:0px;
+    }
+}

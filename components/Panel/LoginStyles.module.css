@@ -1,0 +1,325 @@
+.wrapper {
+  height: 272px;
+  width: inherit;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding-top: 6%;
+  animation-delay: 0.25s;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* border:1px solid black; */
+}
+.panelComponent {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid black;
+  width: 177px;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.panelComponentTransition {
+  width: 476px;
+  transition-delay: 0.25s;
+}
+.greet {
+  position: relative;
+  bottom: -90px;
+  margin: 0;
+  letter-spacing: 0;
+  font-size: 23px;
+  line-height: normal;
+  opacity: 0;
+  margin-bottom: 35px;
+}
+.greetIn{
+  animation: greetingOpening 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.greetOut {
+  animation: greetClosing 0.6s cubic-bezier(0.23,1,0.32,1) forwards;
+}
+@keyframes greetingOpening {
+  to {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes greetClosing {
+  0% {
+    opacity:1;
+    bottom: 0px;
+  }
+  35%{
+    opacity:0;
+  }
+  100% {
+    bottom: -90px;
+  }
+}
+.loginWith {
+  position: relative;
+  border-bottom: 2px solid black;
+  margin: 0px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  height: 230px;
+  overflow-y: hidden;
+  top: -300px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.25s cubic-bezier(0.54, -0.23, 0.02, 0.8);
+}
+.loginWithIn{
+  animation: loginWithOpening 0.35s cubic-bezier(0.54, -0.23, 0.02, 0.8) forwards;
+}
+.fromLoginDelay{
+  animation-delay: 0.5s;
+}
+.loginToDelay {
+  animation-delay: 0.2s;
+}
+.loginWithOut {
+  animation: loginWithClosing 0.25s cubic-bezier(0.54, -0.23, 0.02, 0.8) forwards;
+}
+@keyframes loginWithOpening {
+  to {
+    top: 0px;
+  }
+}
+@keyframes loginWithClosing {
+  from {
+    top:0px;
+  } to {
+    width: -300px;
+  }
+}
+.loginWith ul {
+  width: 100%;
+  border: 0;
+  position: relative;
+  list-style: none;
+  left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginWith ul li {
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 34px;
+  width: 100%;
+}
+.loginWith ul li button {
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  color: #ffff;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  width: 93%;
+  height: 100%;
+  left: -2px;
+  border-right: 1.5px solid white;
+  transition: 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.loginWith ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.301);
+}
+.icons {
+  position: relative;
+  width: 6%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.memberLogin {
+  width: 100%;
+  padding-top: 25px;
+}
+.memberLoginInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.memberLoginInput input {
+  height: 42px;
+  margin-bottom: 10px;
+  padding: 0 18px;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 0%;
+  opacity: 0;
+  writing-mode: horizontal-tb !important;
+  font-style: italic;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  text-overflow: ellipsis;
+}
+.inputIn input{
+  animation: inputOpening 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.35s;
+}
+.inputOutOpacity{
+  animation: inputClosingOpacity 0.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.inputOut{
+  animation: inputClosing 0.55s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.inputOutII {
+  animation: inputClosingII 0.45s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+@keyframes inputOpening {
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes inputClosing {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+  20%{
+    opacity: 0.2;
+  }
+  100%{
+    opacity:0;
+    width:0%;
+  }
+}
+@keyframes inputClosingII {
+  0% {
+    opacity: 1;
+    width: 100%; 
+  }
+  20%{
+    opacity: 0.2;
+    width: 65%;
+  }
+  100%{
+    opacity:0;
+    width:0%;
+  }
+}
+.memberLoginInput input::placeholder {
+  font-style: italic;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  text-overflow: ellipsis;
+}
+.memberLoginInput input:focus {
+  outline: none !important;
+}
+.passwordEye {
+  display: inline;
+  position: relative;
+  width: 20px;
+  height: 0;
+  left: 92%;
+  bottom: 32px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.85s cubic-bezier(0.47, 0.22, 0.14, 1);
+}
+.passwordEyeIn {
+  animation: eyeOpening 0.85s cubic-bezier(0.47, 0.22, 0.14, 1) forwards;
+  animation-delay: 1s;
+}
+.passwordEyeOut {
+  animation: eyeClosing 0.15s cubic-bezier(0.47, 0.22, 0.14, 1) forwards;
+}
+@keyframes eyeOpening {
+  to {
+    bottom: 40px;
+    opacity: 1;
+  }
+}
+@keyframes eyeClosing {
+  from {
+    bottom:40px;
+    opacity:1;
+  } to {
+    left: 55%;
+    bottom:32px;
+    opacity: 0;
+  }
+}
+.optional {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 55%;
+  border: 0;
+  padding: 0 20px 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration-line: underline;
+  cursor: pointer;
+  opacity: 0;
+}
+.optionalIn{
+  animation: opacityOpening 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 1s;
+}
+.optionalOut{
+  animation: opacityClosing 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+@keyframes opacityOpening {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacityClosing {
+  from{
+    opacity:1;
+  } to {
+    opacity:0;
+  }
+}
+.loginButton {
+  margin-top: 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  text-transform: capitalize;
+  width: 200px;
+  height: 42px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  outline: none;
+  white-space: nowrap;
+  background-color: #306850;
+  border: 1px solid #306850;
+  color: white;
+  opacity: 0;
+  transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.loginButtonIn{
+  animation: opacityOpening 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 1s;
+}
+.loginButtonOut{
+  animation: opacityClosing 0.12s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+.loginButton:hover {
+  color: #306850;
+  background-color: transparent;
+}
